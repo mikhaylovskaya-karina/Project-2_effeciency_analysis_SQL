@@ -11,6 +11,50 @@
 
 **Проект осуществлян инструментами SQL**
 
+**Исходные данные представленны в виде:**
+
+Таблица store_customers
+
+| Column_name | Type    | Description                          | 
+| :---------- | :------ | :----------------------------------- | 
+| cust_id     | varchar | id клиента                           |
+| cust_nm     | text    | имя клиента                          |
+| category    | text    | тип клиента: 'Consumer', 'Corporate' |
+
+Таблица store_products
+
+| Column_name | Type    | Description                              | 
+| :---------- | :------ | :--------------------------------------- | 
+| product_id  | varchar | id товара                                |
+| category    | text    | категория товара                         |
+| subcategory | text    | подкатегория товара                      |
+| product_nm  | text    | название, свойства (цвет, модель, бренд) |
+| price       | numeric | цена товара                              |
+
+Таблица store_сarts
+
+| Column_name | Type    | Description                              | 
+| :---------- | :------ | :--------------------------------------- | 
+| id          | integer | id записи в таблице                      |
+| order_id    | varchar | id заказа                                |
+| product_id  | varchar | id товара                                |
+| quantity    | integer | кол-во единиц отдельного товара в заказе |
+| discount    | numeric | скидка                                   |
+
+Таблица store_delivery
+
+| Column_name | Type    | Description               | 
+| :---------- | :------ | :------------------------ | 
+| order_id    | varchar | id заказа                 |
+| order_date  | date    | дата заказа               |
+| ship_date   | date    | фактическая дата доставки |
+| ship_mode   | text    | тип доставки              |
+| state       | text    | штат доставки             |
+| city        | text    | город доставки            |
+| zip_code    | text    | индекс доставки           |
+| cust_id     | varchar | id клиента                |
+
+
 ## 1. Анализ эффективности продаж компании PP
 
 Рассматриваемый период - 4 года с 2017-01-03 по конец 2020-12-30. Объем выручки в рассматриваемом периоде составил 1 446 157 долл. США.
